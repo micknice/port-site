@@ -20,20 +20,26 @@ import Express from '../public/assets/skills/express.png';
 import Flask from '../public/assets/skills/flask_logo_icon_145276.png';
 import Pytorch from '../public/assets/skills/pytorch-logo.png';
 import Pyspark from '../public/assets/skills/pysparkt.png';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
+import {useScroll, motion, useTransform, useMotionValueEvent} from 'framer-motion';
+import {useRef} from 'react'
+
 // import ReactPlayer from 'react-player'
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 
 const Skills = () => {
+  
   return (
+    
+
     <div id='skills' className='w-full lg:h-screen p-2'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
           Skills
         </p>
         <h2 className='py-4'>What I Can Do</h2>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 sm:text-sm '>
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>

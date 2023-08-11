@@ -2,10 +2,26 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AboutImg from '../public/assets/gross-board.jpg';
+import {useScroll, motion, useTransform, useMotionValueEvent, useSpring} from 'framer-motion';
+import {useRef} from 'react'
 
 const About = () => {
+  // const target = useRef(null)
+  // const {scrollYProgress} = useScroll({
+  //   target,
+  //   offset: ['start', 'center','center'],
+  // })
+  // const scaleX = useSpring(scrollYProgress)
+
+  // const parallax = useTransform(scrollYProgress, [0,1], [-500, 1000])
+  // const reverseParallax = useTransform(parallax, (v)=> -v)
+  // useMotionValueEvent(parallax, 'change', (v)=> console.log(v))
   return (
-    <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
+    // <motion.div 
+    //   style={{x: parallax}}
+    // >
+
+    <div id='about' className='w-full  lg:h-screen md:h-screen p-2 flex items-center py-16'>
     <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
       <div className='col-span-2'>
         <p className='uppercase text-xl tracking-widest text-[#5651e5]'>
@@ -41,6 +57,7 @@ const About = () => {
       </div>
     </div>
   </div>
+    // </motion.div>
   )
 }
 

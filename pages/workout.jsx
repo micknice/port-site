@@ -56,21 +56,21 @@ const workout = () => {
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center font-semibold'>
+              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Dart} height='20' className='pr-1 '/>Dart
+                <Image src={Dart} height='30' className='pr-1 '/>Dart
               </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold'>
+              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Flutter} height='20' className='pr-1'/>Flutter
+                <Image src={Flutter} height='30' className='pr-1'/>Flutter
               </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold'>
+              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Firebase} height='20' className='pr-1'/> Firebase
+                <Image src={Firebase} height='30' className='pr-1'/> Firebase
               </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold'>
+              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Bloc} height='23' className='pr-1 px-1'/> BLoC
+                <Image src={Bloc} height='30' className='pr-1 px-1 mr-1'/> BLoC
               </p>
             </div>
           </div>

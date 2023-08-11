@@ -1,4 +1,5 @@
-import React, {useState}from 'react'
+import React, {useState, useEffect}from 'react'
+import {IconContext} from 'react-icons'
 import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
@@ -9,17 +10,44 @@ import navLogo from '../public/assets/nav/LINK.gif'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
 
+  const [shadow, setShadow] = useState(0)
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 50 && window.scrollY <100) {
+        setShadow(0)
+      } else if (window.scrollY >= 100 && window.scrollY <150) {
+        setShadow(1)
+      }  else if (window.scrollY >= 200 && window.scrollY <250) {
+        setShadow(2)
+      } else if (window.scrollY >= 250) {
+        setShadow(3)
+      } else {
+        setShadow(4)
+      }
+    }
+    console.log(shadow)
+    window.addEventListener('scroll', handleShadow)
+  }, []);
+
   const handleNav = () => {
     setNav(!nav)
   }
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100] bg-white bg-opacity-75'>
-      <div className ='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Image 
-        src={navLogo} 
-        alt='/' 
-        // width='125' 
-        height='50'/>
+    <div className={
+      shadow == 0 ? 'fixed w-full h-20 shadow-sm z-[100] bg-white bg-opacity-75' : 
+      shadow == 1 ? 'fixed w-full h-20 shadow z-[100] bg-white bg-opacity-75' : 
+      shadow == 2 ? 'fixed w-full h-20 shadow-lg z-[100] bg-white bg-opacity-75' : 
+      shadow == 3 ? 'fixed w-full h-20 shadow-xl z-[100] bg-white bg-opacity-75' : 
+      'fixed w-full h-20  z-[100] bg-white bg-opacity-75'}>
+      <div className ='flex justify-between items-center w-full h-full px-2 2xl:px-16 sm:ml-3'>
+        <Link href='/'>
+          <Image 
+          src={navLogo} 
+          alt='/' 
+          width='auto' 
+          height='50'/>
+        </Link>
         <div>
           <ul className='hidden md:flex'>
             <Link href='/' >
@@ -66,36 +94,44 @@ const Navbar = () => {
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/'>
-                <li className='py-4 text-sm'>Home</li>
+                <li className='py-4 text-sm font-semibold'>Home</li>
               </Link>
               <Link href='/'>
-                <li className='py-4 text-sm'>About</li>
+                <li className='py-4 text-sm font-semibold'>About</li>
               </Link>
               <Link href='/'>
-                <li className='py-4 text-sm'>Skills</li>
+                <li className='py-4 text-sm font-semibold'>Skills</li>
               </Link>
               <Link href='/'>
-                <li className='py-4 text-sm'>Projects</li>
+                <li className='py-4 text-sm font-semibold'>Projects</li>
               </Link>
               <Link href='/'>
-                <li className='py-4 text-sm'>Contact</li>
+                <li className='py-4 text-sm font-semibold'>Contact</li>
               </Link>
             </ul>
             <div className='pt-40'>
-              <p className='uppercase tracking-widest text-[#5]'>Lets Connect</p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
+              <p className='.self-center uppercase tracking-widest text-[#5]'>Lets Connect</p>
+              <div className='flex items-baseline justify-evenly my-4 w-full sm:w-[80%] mx-1'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaLinkedinIn/>
+                  <IconContext.Provider
+                    value={{color: 'blue'}}
+                  >
+                    <FaLinkedinIn/>
+                  </IconContext.Provider>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <FaGithub/>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <AiOutlineMail/>
+                  <IconContext.Provider
+                    value={{color: '#db0d0d'}}
+                  >
+                    <AiOutlineMail/>
+                  </IconContext.Provider>
                 </div>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                {/* <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <BsPersonLinesFill/>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
