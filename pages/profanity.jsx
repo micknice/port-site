@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image  from 'next/image';
 import React from 'react';
 
 import JavaScript from '../public/assets/skills/JavaScript-logo.png';
@@ -24,7 +24,7 @@ const workout = () => {
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
         <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />       
-        <Image
+        <Image 
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
@@ -58,7 +58,7 @@ const workout = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <button className='px-8 py-2 mt-4 mr-8 hover:scale-105'>Docker Image</button>
+            <button className='px-8 py-2 mt-4 mr-8 hover:scale-105'>Docker Image alt='/'</button>
           </a>
           
         </div>
@@ -69,15 +69,15 @@ const workout = () => {
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={JavaScript} height='30' className='pr-1'/>JavaScript
+                <Image alt='/' src={JavaScript} height='30' className='pr-1'/>JavaScript
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Express} height='29' className='pr-1'/>Express
+                <Image alt='/' src={Express} height='29' className='pr-1'/>Express
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Docker} height='30' className='pr-1 px-1'/> Docker
+                <Image alt='/' src={Docker} height='30' className='pr-1 px-1'/> Docker
               </p>
             </div>
           </div>

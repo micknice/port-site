@@ -20,7 +20,7 @@ const workout = () => {
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
         <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />       
-        <Image
+        <Image 
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
@@ -58,19 +58,19 @@ const workout = () => {
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Dart} height='30' className='pr-1 '/>Dart
+                <Image alt='/' src={Dart} height='30' className='pr-1 '/>Dart
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Flutter} height='30' className='pr-1'/>Flutter
+                <Image alt='/' src={Flutter} height='30' className='pr-1'/>Flutter
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Firebase} height='30' className='pr-1'/> Firebase
+                <Image alt='/' src={Firebase} height='30' className='pr-1'/> Firebase
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Bloc} height='30' className='pr-1 px-1 mr-1'/> BLoC
+                <Image alt='/' src={Bloc} height='30' className='pr-1 px-1 mr-1'/> BLoC
               </p>
             </div>
           </div>

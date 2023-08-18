@@ -30,7 +30,7 @@ const skinscan = () => {
         {/* <SimpleSlider imgArr={imgArr}/> */}
 
         
-        <Image
+        <Image 
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
@@ -98,31 +98,31 @@ const skinscan = () => {
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Javascript} height='30' className='pr-1 '/>Javascript
+                <Image alt='/' src={Javascript} height='30' className='pr-1 '/>Javascript
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Vue} height='27' className='pr-1 '/>Vue
+                <Image alt='/' src={Vue} height='27' className='pr-1 '/>Vue
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Express} height='30' className='pr-1 '/>Express
+                <Image alt='/' src={Express} height='30' className='pr-1 '/>Express
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Mysql} height='30' className='pr-1 '/>MySQL
+                <Image alt='/' src={Mysql} height='30' className='pr-1 '/>MySQL
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Python} height='30' className='pr-1 '/>Python
+                <Image alt='/' src={Python} height='30' className='pr-1 '/>Python
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Flask} height='30' className='pr-1 '/>Flask
+                <Image alt='/' src={Flask} height='30' className='pr-1 '/>Flask
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={Pytorch} height='30' className='pr-1 '/>PyTorch
+                <Image alt='/' src={Pytorch} height='30' className='pr-1 '/>PyTorch
               </p>
             </div>
           </div>

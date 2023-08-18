@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image  from 'next/image';
 import React from 'react';
 import workoutImg from '../public/assets/projects/workout.png';
 import JavaScript from '../public/assets/skills/JavaScript-logo.png';
@@ -27,7 +27,7 @@ const workout = () => {
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
         <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />       
-        <Image
+        <Image 
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
@@ -50,7 +50,7 @@ const workout = () => {
             Written in JavaScript, pulling member data from postgreSQL database and route data from Bing Maps API. GUI made with React and Mapbox, updated via Socket.IO. 
             I have a few long term goals for this project, firstly I am working on a refactor which will make all the API calls up front so the simulation can be run fast.
             This will allow the generation of large amounts of data which I will use to optimize the home locations and allocation algorithm to optimize the fix/travel time ratio.
-            I'm also working on spinning up multiple 'handlers' which will feed their allocations into a centralized pipeline using Docker, K8 and Kafka.
+            Im also working on spinning up multiple handlers which will feed their allocations into a centralized pipeline using Docker, K8 and Kafka.
           </p>
           <ReactPlayer className=' py-8'url='https://youtu.be/DnE5YcD77SE' config={{youtube: {playerVars: {cc_load_policy: 1}}}}/> 
           <a
@@ -76,31 +76,31 @@ const workout = () => {
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={JavaScript} height='30' className='pr-1'/>JavaScript
+                <Image alt='/' src={JavaScript} height='30' className='pr-1'/>JavaScript
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={ReactLogo} height='29' className='pr-1'/>React
+                <Image alt='/' src={ReactLogo} height='29' className='pr-1'/>React
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image src={PostgreSQL} height='26' className='pr-1 mr-1'/> PostgreSQL
+                <Image alt='/' src={PostgreSQL} height='26' className='pr-1 mr-1'/> PostgreSQL
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Mapbox} height='30' className='pr-1 px-1'/> Mapbox
+                <Image alt='/' src={Mapbox} height='30' className='pr-1 px-1'/> Mapbox
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Bing} height='30' className='pr-1 px-1 mr-1'/> Bing Maps
+                <Image alt='/' src={Bing} height='30' className='pr-1 px-1 mr-1'/> Bing Maps
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Socket} height='26' className='pr-1 px-1 mr-0.5'/> Socket.IO
+                <Image alt='/' src={Socket} height='26' className='pr-1 px-1 mr-0.5'/> Socket.IO
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
                 {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image src={Docker} height='30' className='pr-1 px-1'/> Docker
+                <Image alt='/' src={Docker} height='30' className='pr-1 px-1'/> Docker
               </p>
             </div>
           </div>
