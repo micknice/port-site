@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {IconContext} from 'react-icons'
 import React, { useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/nav/LINK.gif';
@@ -17,15 +16,14 @@ const Contact = () => {
         </p>
         <h2 className='py-4'>Get In Touch</h2>
         <div className='grid lg:grid-cols-5 gap-8'>
-          {/* left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full'>
-              <div className>
+              <div>
                 <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300 max-h-[440px] lg:max-h-[380px] lg:w-auto'
                   src={ContactImg}
                   alt='/'
-                  
+                  height='auto'
                 />
               </div>
               <div>
@@ -36,6 +34,7 @@ const Contact = () => {
                   me and let&apos;s talk.
                 </p>
               </div>
+              
               <div>
                 <p className='uppercase pt-8'>Connect With Me</p>
                 <div className='flex items-center justify-between py-4'>
@@ -69,19 +68,15 @@ const Contact = () => {
                         <AiOutlineMail />
                     </IconContext.Provider>
                   </div>
-                  {/* <Link href='/resume'>
-                    
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <BsFillPersonLinesFill />
-                      </div>
-                    
-                  </Link> */}
                 </div>
+
               </div>
             </div>
           </div>
 
-          {/* right */}
+
+
+
           <div className='col-span-3 w-full h-auto shadow-xl  shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
               <form
@@ -140,6 +135,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
+        
         <div className='flex justify-center py-12'>
           <Link href='/'>
             
