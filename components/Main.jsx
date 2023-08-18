@@ -49,7 +49,7 @@ const Main = () => {
           
         );
         return () => clearTimeout(intervalId);
-      }, []);
+      },);
 
     
     useEffect(() => {
@@ -110,7 +110,7 @@ const Main = () => {
                     <div>
                         {/* <p className='uppercase text-sm tracking-widest  text-gray-700 py-5'>LET'S GET BUSY</p>                */}
                         <animated.div style={{...springLeft}}>
-                            <h1 className='py-4 text-gray-700 '>So I heard you're looking for</h1>
+                            <h1 className='py-4 text-gray-700 '>{"So I heard you're looking for"}</h1>
                         </animated.div>
                         <div className='py-4 justify-center text-gray-700'>
                             <animated.div style={{...springRight}}>
