@@ -128,7 +128,7 @@ const Main = () => {
                 </div>
                 <div className='grid grid-cols-1 py-20 justify-center'>
                     <animated.div style={{...springFadeIn}}>
-                        <p className=' text-gray-600 max-w-[70%] m-auto'>No way! I'm looking for someone who's looking for that!</p>
+                        <p className=' text-gray-600 max-w-[70%] m-auto'>{"No way! I'm looking for someone who's looking for that!"}</p>
                     </animated.div>
                 </div>
                 <div className='flex items-center justify-evenly max-w-[330px] m-auto '>
