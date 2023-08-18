@@ -11,20 +11,21 @@ import ContactImg from '../public/assets/nav/LINK.gif';
 const Contact = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full max-h-[800]'>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+      <div className='max-w-[1240px] m-auto px-2 py-16  w-full max-h-[700]'>
+        <p className='text-xl tracking-widest uppercase mt-[40px] text-[#5651e5]'>
           Contact
         </p>
         <h2 className='py-4'>Get In Touch</h2>
         <div className='grid lg:grid-cols-5 gap-8'>
           {/* left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-            <div className='lg:p-4 h-full '>
-              <div>
+            <div className='lg:p-4 h-full'>
+              <div className>
                 <Image
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
+                  className='rounded-xl hover:scale-105 ease-in duration-300 max-h-[440px] lg:max-h-[380px] lg:w-auto'
                   src={ContactImg}
                   alt='/'
+                  
                 />
               </div>
               <div>
@@ -68,23 +69,23 @@ const Contact = () => {
                         <AiOutlineMail />
                     </IconContext.Provider>
                   </div>
-                  <Link href='/resume'>
+                  {/* <Link href='/resume'>
                     
                       <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <BsFillPersonLinesFill />
                       </div>
                     
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+          <div className='col-span-3 w-full h-auto shadow-xl  shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
               <form
-                action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+                action='https://getform.io/f/309ba8e4-d358-40a3-b72b-e632fd940052'
                 method='POST'
                 encType='multipart/form-data'
               >

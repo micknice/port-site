@@ -2,11 +2,16 @@
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-  "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    ".public/assets/parallax/*.{png}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'mountainsfg': " url(../public/assets/parallax/mountainsfg.png)",
+      },
+    },
   },
   plugins: [],
 }

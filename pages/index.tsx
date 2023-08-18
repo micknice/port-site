@@ -14,10 +14,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>teh app</title>
+        <title>Mike McCullagh - Portfolio</title>
         <meta name="description" content="etc. etc."/>
         <link rel="icon" href="/favicon.ico" />
-        
       </Head>
       <Navbar/>
       <Main/>

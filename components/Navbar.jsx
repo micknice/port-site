@@ -4,21 +4,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import {FaLinkedinIn, FaGithub} from 'react-icons/fa'
-import {BsPersonLinesFill} from 'react-icons/bs'
-import navLogo from '../public/assets/nav/LINK.gif'
+import navLogo from '../public/assets/nav/brain.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
 
-  const [shadow, setShadow] = useState(0)
+  const [shadow, setShadow] = useState(4)
 
   useEffect(() => {
     const handleShadow = () => {
-      if (window.scrollY >= 50 && window.scrollY <100) {
+      if (window.scrollY >= 0 && window.scrollY <50) {
+        setShadow(4)
+      } 
+      else if (window.scrollY >= 50 && window.scrollY <100) {
         setShadow(0)
-      } else if (window.scrollY >= 100 && window.scrollY <150) {
+      } 
+      else if (window.scrollY >= 100 && window.scrollY <150) {
         setShadow(1)
-      }  else if (window.scrollY >= 200 && window.scrollY <250) {
+      }  else if (window.scrollY >= 150 && window.scrollY <250) {
         setShadow(2)
       } else if (window.scrollY >= 250) {
         setShadow(3)
@@ -26,7 +29,7 @@ const Navbar = () => {
         setShadow(4)
       }
     }
-    console.log(shadow)
+    console.log('shadow', shadow)
     window.addEventListener('scroll', handleShadow)
   }, []);
 
@@ -35,36 +38,41 @@ const Navbar = () => {
   }
   return (
     <div className={
-      shadow == 0 ? 'fixed w-full h-20 shadow-sm z-[100] bg-white bg-opacity-75' : 
-      shadow == 1 ? 'fixed w-full h-20 shadow z-[100] bg-white bg-opacity-75' : 
-      shadow == 2 ? 'fixed w-full h-20 shadow-lg z-[100] bg-white bg-opacity-75' : 
-      shadow == 3 ? 'fixed w-full h-20 shadow-xl z-[100] bg-white bg-opacity-75' : 
-      'fixed w-full h-20  z-[100] bg-white bg-opacity-75'}>
+      shadow == 4 ? 'fixed w-full h-20 shadow-none z-[100] bg-[#ecf0f3] bg-opacity-100' : 
+      shadow == 0 ? 'fixed w-full h-20 shadow-sm z-[100] bg-[#eff3f5] bg-opacity-95' : 
+      shadow == 1 ? 'fixed w-full h-20 shadow z-[100] bg-[#f2f7f7] bg-opacity-90' : 
+      shadow == 2 ? 'fixed w-full h-20 shadow-lg z-[100] bg-[#f5faf9] bg-opacity-85' : 
+      shadow == 3 ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#f8fdfb] bg-opacity-80' : 
+      'fixed w-full h-20  shadow-none z-[100] bg-white bg-opacity-100'}>
       <div className ='flex justify-between items-center w-full h-full px-2 2xl:px-16 sm:ml-3'>
         <Link href='/'>
-          <Image 
+          <Image className ={
+        shadow == 4 ? '' : 
+        shadow == 0 ? 'opacity-75 ' : 
+        shadow == 1 ? 'opacity-30' : 
+        shadow == 2 ? 'opacity-10' : 
+        shadow == 3 ? 'opacity-0' : 
+        'opacity-0'}
           src={navLogo} 
           alt='/' 
           width='auto' 
-          height='50'/>
+        height='50'/>
         </Link>
         <div>
           <ul className='hidden md:flex'>
             <Link href='/' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Home</li>
             </Link>
-            <Link href='#about' >
+            <Link href='/#about' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>About</li>
             </Link>
-            <Link href='#skills' >
+            <Link href='/#skills' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Skills</li>
             </Link>
-            <Link href='#projects' >
+            <Link href='/#projects' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Projects</li>
             </Link>
-            <Link href='/resume' >
-              <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Resume</li>
-            </Link>
+
             <Link href='#contact' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Contact</li>
             </Link>
@@ -93,20 +101,20 @@ const Navbar = () => {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/'>
-                <li className='py-4 text-sm font-semibold'>Home</li>
+              <Link href='/' >
+                <li className='py-4 text-sm font-semibold' onClick={handleNav} >Home</li>
               </Link>
-              <Link href='/'>
-                <li className='py-4 text-sm font-semibold'>About</li>
+              <Link href='/#about' >
+                <li className='py-4 text-sm font-semibold' onClick={handleNav}>About</li>
               </Link>
-              <Link href='/'>
-                <li className='py-4 text-sm font-semibold'>Skills</li>
+              <Link href='/#skills'>
+                <li className='py-4 text-sm font-semibold' onClick={handleNav}>Skills</li>
               </Link>
-              <Link href='/'>
-                <li className='py-4 text-sm font-semibold'>Projects</li>
+              <Link href='/#projects'>
+                <li className='py-4 text-sm font-semibold ' onClick={handleNav}>Projects</li>
               </Link>
-              <Link href='/'>
-                <li className='py-4 text-sm font-semibold'>Contact</li>
+              <Link href='/#contact'>
+                <li className='py-4 text-sm font-semibold' onClick={handleNav}>Contact</li>
               </Link>
             </ul>
             <div className='pt-40'>
@@ -129,9 +137,7 @@ const Navbar = () => {
                     <AiOutlineMail/>
                   </IconContext.Provider>
                 </div>
-                {/* <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <BsPersonLinesFill/>
-                </div> */}
+                
               </div>
             </div>
           </div>

@@ -8,13 +8,18 @@ import Docker from '../public/assets/skills/docker.png';
 import Mapbox from '../public/assets/skills/mapbox.png'
 import Socket from '../public/assets/skills/Socket-io.png'
 import Bing from '../public/assets/skills/bing.png'
+import SimImg from '../public/assets/projects/SimShot.png'
 
+import dynamic from 'next/dynamic'
+// import ReactPlayer from 'react-player'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 
 
 
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
+import YouTubePlayer from 'react-player/youtube';
 
 const workout = () => {
   
@@ -26,7 +31,7 @@ const workout = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={workoutImg}
+          src={SimImg}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
@@ -45,9 +50,9 @@ const workout = () => {
             Written in JavaScript, pulling member data from postgreSQL database and route data from Bing Maps API. GUI made with React and Mapbox, updated via Socket.IO. 
             I have a few long term goals for this project, firstly I am working on a refactor which will make all the API calls up front so the simulation can be run fast.
             This will allow the generation of large amounts of data which I will use to optimize the home locations and allocation algorithm to optimize the fix/travel time ratio.
-            I'am also working on spinning up multiple 'handlers' which will feed their allocations into a centralized pipeline using Docker, K8 and Kafka.
+            I'm also working on spinning up multiple 'handlers' which will feed their allocations into a centralized pipeline using Docker, K8 and Kafka.
           </p>
-          {/* <ReactPlayer className=' py-8'url='https://youtu.be/QbiGu2FLbAY' />  */}
+          <ReactPlayer className=' py-8'url='https://youtu.be/DnE5YcD77SE' config={{youtube: {playerVars: {cc_load_policy: 1}}}}/> 
           <a
             href='https://github.com/micknice/AA_breakdown_simulator'
             target='_blank'

@@ -1,54 +1,69 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import AboutImg from '../public/assets/gross-board.jpg';
-import {useScroll, motion, useTransform, useMotionValueEvent, useSpring} from 'framer-motion';
-import {useRef} from 'react'
+import AboutImg from '../public/assets/skills/glasto.jpeg';
+import {useScroll, motion, useAnimation, useTransform, useMotionValueEvent, useSpring} from 'framer-motion';
+import {useEffect, useRef} from 'react'
+import { useInView } from "react-intersection-observer";
+
 
 const About = () => {
-  // const target = useRef(null)
-  // const {scrollYProgress} = useScroll({
-  //   target,
-  //   offset: ['start', 'center','center'],
-  // })
-  // const scaleX = useSpring(scrollYProgress)
+  
+  // const control = useAnimation()
+  // const {ref, inView} = useInView({margin: "0px 400px -400px 0px"})
+  
+  // const boxVariant = {
+  //   visible: { opacity: 1, scale: 1, x:0, transition: {delay: 0.5, duration: 0.5} },
+  //   hidden: { opacity: 0, scale: 1, x:600 },
+  // }
+  // useEffect(() => {
+  //   if(inView) {
+  //     control.start("visible")
+  //     console.log(inView)
+  //   } else {
+  //     control.start("hidden")
+  //   }
+  // },[control, inView])
 
-  // const parallax = useTransform(scrollYProgress, [0,1], [-500, 1000])
-  // const reverseParallax = useTransform(parallax, (v)=> -v)
-  // useMotionValueEvent(parallax, 'change', (v)=> console.log(v))
+
+  
   return (
-    // <motion.div 
-    //   style={{x: parallax}}
-    // >
+    
+  
+    <div id='about' className='w-full  lg:h-screen md:h-screen p-2 flex items-center py-16 mb-20'>
+    {/* <motion.div
+      ref={ref}
+      variants={boxVariant}
+      initial='hidden'
+      animate={control}
+      className='w-full  lg:h-screen md:h-screen p-2 flex items-center py-16 mb-20'
+    > */}
 
-    <div id='about' className='w-full  lg:h-screen md:h-screen p-2 flex items-center py-16'>
     <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-      <div className='col-span-2'>
-        <p className='uppercase text-xl tracking-widest text-[#5651e5]'>
+      <div className='col-span-2 mt-[45px] lg:mt-0'>
+        <p className='uppercase text-xl tracking-widest  text-[#5651e5]'>
           About
         </p>
         <h2 className='py-4'>Who I Am</h2>
         <p className='py-2 text-gray-600'>
-          I specialize in building mobile responsive front-end UI applications
-          that connect with API’s and other backend technologies. I’m
-          passionate about learning new technologies and understand there is
-          more than one way to accomplish a task. Though I am most proficient
-          in building front-end applications using HTML, CSS, Javascript, and
-          React, I am a quick learner and can pick up new tech stacks as
-          needed. I believe that being a great developer is not using one
-          specific language, but choosing the best tool for the job.
+          I love coding. I love solving complex problems. I know how to google.
         </p>
         <p className='py-2 text-gray-600'>
-          I started web developement in 2013 managing multiple e-commerce
-          websites on CMS platforms such as WordPress, BigCommerce, and
-          Shopify. I have experience working directly with clients and taking
-          mock wireframes all the way to deployed applications. In my spare
-          time I run Code Commerce, a Youtube channel where I teach web
-          developement and various front-end technologies.
+          I started coding in 2022 writing small data and basic machine learning 
+          programs in Python and completed the Northcoders Software Development
+          bootcamp in April of 2023 where I was primed in the fundamentals of full stack development. Since then I have been working hard to pick up new 
+          languages and technologies to extend my skills in back-end, front-end and data. 
+        </p>
+        <p className='py-2 text-gray-600'>
+          Looking for a junior position somewhere where I can push myself, listen, learn and ultimately get good.
+        </p>
+        <p className='py-2 text-gray-600'> 
+          In my spare time I like to lift weights and produce instrumental library music, some of which occasionally finds its way into film and television.
+          Neal Stephenson obsessive.
         </p>
         <Link href='/#projects'>
           <p className='py-2 text-gray-600 underline cursor-pointer'>
-            Check out some of my latest projects.
+            A picture paints a thousand words. So why not check out some of my latest projects?
           </p>
         </Link>
       </div>
@@ -56,8 +71,9 @@ const About = () => {
         <Image src={AboutImg} className='rounded-xl' alt='/' />
       </div>
     </div>
+    {/* </motion.div> */}
   </div>
-    // </motion.div>
+    
   )
 }
 

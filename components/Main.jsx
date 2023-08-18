@@ -2,13 +2,11 @@ import React from 'react'
 import {IconContext} from 'react-icons'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
-import { useSpring, animated, config, easings } from '@react-spring/web'
+import { useSpring, animated, easings } from '@react-spring/web'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import TextTransition, {presets} from 'react-text-transition'
-// import {animate} from 'framer-motion'
-// import {useState} from 'react'
+
 
 const TEXTS = ['Software', 'React', 'ML', 'Flutter', 'Cloud']
 const COLOURS = ['text-[#5651e5]', 'text-[#e58751]', 'text-[#e5d651]']
@@ -41,7 +39,7 @@ const config3 = {
 
 const Main = () => {
     const [index, setIndex] = useState(0);
-    const [aOrAn, setAOrAn] = useState('A')
+    const [aOrAn, setAOrAn] = useState('a')
     const [devWord, setDevWord] = useState('Software');
     const [linkedInColor, setLinkedInColor] = useState('black')
 
@@ -57,9 +55,9 @@ const Main = () => {
     
     useEffect(() => {
         if(devWord === 'ML') {
-            setAOrAn('An')
+            setAOrAn('an')
         } else {
-            setAOrAn('A')
+            setAOrAn('a')
         }
     }, [devWord]);
 
@@ -85,63 +83,61 @@ const Main = () => {
         to: { y: 0 },
         config: config2,
         delay:100
-      })
+    })
     const springUp2 = useSpring({
         from: { y: 300 },
         to: { y: 0 },
         config: config2,
         delay:200
-      })
+    })
     const springUp3 = useSpring({
         from: { y: 300 },
         to: { y: 0 },
         config: config2,
         delay:300
-      })
+    })
     const springFadeIn = useSpring({
         from: { opacity: 0 },
         to: { opacity: 100 },
         config: config3,
         delay:600
-      })
-      const COLOURS = ['text-[#5651e5]', 'text-[#e58751]']
-  return (
-    <div id='home' className='w-full h-screen 2 text-center'>
-        <div className='max-w-[1240px] w-full h-full mx-auto p-2 justify-center items-center'>
-
-        
-        <div className='max-w-[1240px] w-full h-5/6 mx-auto p-2 flex justify-center items-center'>
-            <div>
-                <p className='uppercase text-sm tracking-widest text-gray-600 '>LET'S GET BUSY</p>
-                <animated.div style={{...springLeft}}>
-                    <h1 className='py-4 text-gray-700'>Hi, I'm <span className='text-[#5651e5]'> Mike</span></h1>
-                </animated.div>
-                    <div className='py-4 text-gray-700'>
-                <animated.div style={{...springRight}}>
-
-                    <h1 className='py-4 text-gray-700 flex'>{aOrAn}
-                        <span className='text-[#e5d651]  '>{' '}
-                            <TextTransition className='ml-5 mr-5' springConfig={presets.stiff}>
-                                
-                                {devWord} 
-                            </TextTransition>
-                        </span> Dev
-                    </h1>
-                </animated.div>
+    })
+    const COLOURS = ['text-[#5651e5]', 'text-[#e58751]']
+    return (
+        <div id='home' className='w-full h-screen pt-20 text-center  z-50'>
+            <div className='max-w-[1240px] w-full h-4/6 mx-auto pt-20 mt-16 justify-center  bg-gradient-to-t from-[#ecf0f3] to-gray-200'>
+            {/* <div className='max-w-[1240px] w-full h-4/6 mx-auto pt-20 mt-16 justify-center  bg-mountainsfg bg-cover '> */}
+                <div className='max-w-[1240px] w-full h-3/6 pt-20 mx-auto flex justify-center items-center'>
+                    <div>
+                        {/* <p className='uppercase text-sm tracking-widest  text-gray-700 py-5'>LET'S GET BUSY</p>                */}
+                        <animated.div style={{...springLeft}}>
+                            <h1 className='py-4 text-gray-700 '>So I heard you're looking for</h1>
+                        </animated.div>
+                        <div className='py-4 justify-center text-gray-700'>
+                            <animated.div style={{...springRight}}>
+                                <h1 className='py-4 justify-center text-gray-700 flex'>{aOrAn}
+                                    <span className='text-[#e5d651]  '>{' '}
+                                        <TextTransition className='ml-5 mr-5' springConfig={presets.stiff}>
+                                            {devWord} 
+                                        </TextTransition>
+                                    </span> dev?
+                                </h1>
+                            </animated.div>
+                        </div>
                     </div>
-                <animated.div style={{...springFadeIn}}>
-                    <p className='py-4 text-gray-600 max-w-[70%] m-auto'>I make software</p>
-                </animated.div>
-                
-            </div>
-        </div>
-            <div className='flex items-center justify-evenly max-w-[330px] m-auto '>
+                </div>
+                <div className='grid grid-cols-1 py-20 justify-center'>
+                    <animated.div style={{...springFadeIn}}>
+                        <p className=' text-gray-600 max-w-[70%] m-auto'>No way! I'm looking for someone who's looking for that!</p>
+                    </animated.div>
+                </div>
+                <div className='flex items-center justify-evenly max-w-[330px] m-auto '>
                     <a href='https://www.linkedin.com/in/mike-mccullagh-7171b5234/'>
                         <animated.div style={{...springUp1}}>
                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-indigo-50'>
                                 <IconContext.Provider
                                     value={{color: 'blue'}}
-                                >
+                                    >
                                     <FaLinkedinIn/>
                                 </IconContext.Provider>
                             </div>
@@ -159,17 +155,13 @@ const Main = () => {
                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300 hover:bg-indigo-50'>
                                 <IconContext.Provider
                                     value={{color: '#db0d0d'}}
-                                >
+                                    >
                                     <AiOutlineMail/>
                                 </IconContext.Provider>
                             </div>
                         </Link>
                     </animated.div>
-                        {/* <animated.div style={{...springs3}}>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
-                        <BsFillPersonLinesFill/>
-                    </div>
-                        </animated.div> */}
+                
                 </div>
         </div>
     </div>

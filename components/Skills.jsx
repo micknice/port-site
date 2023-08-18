@@ -20,46 +20,45 @@ import Express from '../public/assets/skills/express.png';
 import Flask from '../public/assets/skills/flask_logo_icon_145276.png';
 import Pytorch from '../public/assets/skills/pytorch-logo.png';
 import Pyspark from '../public/assets/skills/pysparkt.png';
-import dynamic from 'next/dynamic';
-import {useScroll, motion, useTransform, useMotionValueEvent} from 'framer-motion';
-import {useRef} from 'react'
 
-// import ReactPlayer from 'react-player'
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
 
 
 const Skills = () => {
+
   
   return (
-    
-
-    <div id='skills' className='w-full lg:h-screen p-2'>
-      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+    <div id='skills' className='w-full mt-30 lg:h-screen p-2 '>
+      <div className='max-w-[1240px] mx-auto mt-[10px] flex flex-col justify-center h-full'>
+        <p className='text-xl tracking-widest mt-[90px] lg:mt-[320px] uppercase text-[#5651e5]'>
           Skills
         </p>
         <h2 className='py-4'>What I Can Do</h2>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 sm:text-sm '>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2 sm:text-sm '>
+          
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+            <div className='grid grid-cols-2 gap-2  lg:gap-6 justify-items-between items-center'>
               <div className='m-auto'>
                 <Image src={Javascript} width='64px' height='64px' alt='/' />
               </div>
-              <div className='flex flex-col items-center justify-center'>
-                <h3>JavaScript</h3>
+              <div className='flex flex-col items-center justify-center '>
+                <h3 className='sm:text-sm'>JS</h3>
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image src={Typescript} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>TypeScript</h3>
+                <h3>TS</h3>
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -70,6 +69,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -80,6 +80,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -90,6 +91,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -100,6 +102,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -110,6 +113,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -120,7 +124,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -131,6 +135,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -141,6 +146,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -151,6 +157,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -161,16 +168,18 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image src={Postgres} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>PostgreSQL</h3>
+                <h3>Postgres</h3>
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto justify-center items-center'>
@@ -181,6 +190,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -191,6 +201,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -201,6 +212,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -211,7 +223,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -222,6 +234,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -232,6 +245,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
@@ -242,7 +256,6 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
