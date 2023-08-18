@@ -31,7 +31,7 @@ const Navbar = () => {
     }
     console.log('shadow', shadow)
     window.addEventListener('scroll', handleShadow)
-  }, []);
+  },);
 
   const handleNav = () => {
     setNav(!nav)

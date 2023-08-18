@@ -41,7 +41,6 @@ const Main = () => {
     const [index, setIndex] = useState(0);
     const [aOrAn, setAOrAn] = useState('a')
     const [devWord, setDevWord] = useState('Software');
-    const [linkedInColor, setLinkedInColor] = useState('black')
 
     useEffect(() => {
         const intervalId = setInterval(
@@ -59,7 +58,7 @@ const Main = () => {
         } else {
             setAOrAn('a')
         }
-    }, [devWord]);
+    }, [devWord, index]);
 
     useEffect(() => {
         setDevWord(TEXTS[index % TEXTS.length])
