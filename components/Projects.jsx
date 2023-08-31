@@ -3,6 +3,7 @@ import Skinscan from '../public/assets/projects/SKINSCAN.png';
 import Workout from '../public/assets/projects/workout.png';
 import Breakdown from '../public/assets/projects/SimShot.png'
 import Profanity from '../public/assets/projects/profanity.png'
+import Memeosphere from '../public/assets/projects/memeosphereScrnsht.png'
 
 import ProjectItem from './ProjectItem';
 import ProjectItemVideo from './ProjectItemVideo';
@@ -33,6 +34,12 @@ const Projects = () => {
             backgroundImg={Breakdown}
             projectUrl='/breakdown'
             tech='JavaScript, React, PostgreSQL, Mapbox, Bing Maps, Socket.IO, Docker'
+          />          
+          <ProjectItem
+            title='Meme-o-sphere. Turn based game'
+            backgroundImg={Memeosphere}
+            projectUrl='/memeosphere'
+            tech='JavaScript, Next, React, MobX'
           />          
           <ProjectItem
             title='Profanity Filter Microservice'

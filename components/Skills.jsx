@@ -13,7 +13,7 @@ import Firebase from '../public/assets/skills/firebase.png';
 import Mongodb from '../public/assets/skills/mongo.png';
 import Postgres from '../public/assets/skills/Postgresql_elephant.svg.png';
 import Mysql from '../public/assets/skills/mysql.png';
-import NextJS from '../public/assets/skills/nextjs-icon-light-background.png'
+import NextJS from '../public/assets/skills/next.png'
 import Docker from '../public/assets/skills/docker.png';
 import Flutter from '../public/assets/skills/flutter.png';
 import Express from '../public/assets/skills/express.png';
