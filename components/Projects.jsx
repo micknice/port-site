@@ -4,6 +4,7 @@ import Workout from '../public/assets/projects/workout.png';
 import Breakdown from '../public/assets/projects/SimShot.png'
 import Profanity from '../public/assets/projects/profanity.png'
 import Memeosphere from '../public/assets/projects/memeosphereScrnsht.png'
+import cashImg from '../public/assets/projects/cashoverflowcrop.png'
 
 import ProjectItem from './ProjectItem';
 import ProjectItemVideo from './ProjectItemVideo';
@@ -40,6 +41,12 @@ const Projects = () => {
             backgroundImg={Memeosphere}
             projectUrl='/memeosphere'
             tech='JavaScript, Next, React, MobX'
+          />          
+          <ProjectItem
+            title='Cash Overflow. Instant win game of chance'
+            backgroundImg={cashImg}
+            projectUrl='/cashoverflow'
+            tech='TypeScript, Next, React, Tailwind, MobX'
           />          
           <ProjectItem
             title='Profanity Filter Microservice'

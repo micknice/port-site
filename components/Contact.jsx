@@ -10,7 +10,7 @@ import ContactImg from '../public/assets/nav/LINK.gif';
 const Contact = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16  w-full max-h-[700]'>
+      <div className='max-w-[1240px] m-auto px-2 py-[15rem]  w-full max-h-[700]'>
         <p className='text-xl tracking-widest uppercase mt-[40px] text-[#5651e5]'>
           Contact
         </p>
