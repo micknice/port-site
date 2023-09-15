@@ -25,31 +25,31 @@ const Projects = () => {
             tech='Vue, Express, Flask, PyTorch'
           />          
           <ProjectItem
-            title='Workout Tracker'
+            title='Lift Tracker'
             backgroundImg={Workout}
             projectUrl='/workout'
             tech='Flutter, Firebase, BLoC'
           />          
           <ProjectItem
-            title='Breakdown Simulator'
+            title='AA Simulator'
             backgroundImg={Breakdown}
             projectUrl='/breakdown'
-            tech='JavaScript, React, PostgreSQL, Mapbox, Bing Maps, Socket.IO, Docker'
+            tech='React, PostgreSQL, Socket.IO'
           />          
           <ProjectItem
-            title='Meme-o-sphere. Turn based game'
+            title='Memeosphere'
             backgroundImg={Memeosphere}
             projectUrl='/memeosphere'
-            tech='JavaScript, Next, React, MobX'
+            tech='Next, React, MobX'
           />          
           <ProjectItem
-            title='Cash Overflow. Instant win game of chance'
+            title='Cash Overflow'
             backgroundImg={cashImg}
             projectUrl='/cashoverflow'
-            tech='TypeScript, Next, React, Tailwind, MobX'
+            tech='TypeScript, Next, Tailwind, MobX'
           />          
           <ProjectItem
-            title='Profanity Filter Microservice'
+            title='Profanity Filter'
             backgroundImg={Profanity}
             projectUrl='/profanity'
             tech='JavaScript, Express, Docker'

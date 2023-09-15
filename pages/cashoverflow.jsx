@@ -8,6 +8,7 @@ import MobXImg from '../public/assets/skills/MobX.png'
 import cashImg from '../public/assets/projects/cashoverflowcrop.png'
 import TypeScript from '../public/assets/skills/Typescript_logo_2020.svg.png'
 import Tailwind from '../public/assets/skills/Tailwind_CSS_Logo.svg.png'
+import GameOne from '../components/GameOne'
 
 
 import dynamic from 'next/dynamic'
@@ -39,7 +40,7 @@ const workout = () => {
         </div>
       </div>
 
-      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
+      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5  py-8'>
           
         <div className='col-span-4'>
           <p>Project</p>
@@ -47,6 +48,7 @@ const workout = () => {
           <p>
             Instant win game of chance.
           </p>
+          
           <a
             href='https://main--singular-manatee-cfe23a.netlify.app/'
             target='_blank'

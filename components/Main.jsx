@@ -8,7 +8,7 @@ import {useEffect, useState} from 'react'
 import TextTransition, {presets} from 'react-text-transition'
 
 
-const TEXTS = ['Software', 'React', 'ML', 'Flutter', 'Cloud']
+const TEXTS = ['JS', 'TS', 'Python', 'React', 'Software']
 const COLOURS = ['text-[#5651e5]', 'text-[#e58751]', 'text-[#e5d651]']
 const config1 = {
             mass: 2, 
@@ -110,7 +110,7 @@ const Main = () => {
                     <div>
                         {/* <p className='uppercase text-sm tracking-widest  text-gray-700 py-5'>LET'S GET BUSY</p>                */}
                         <animated.div style={{...springLeft}}>
-                            <h1 className='py-4 text-gray-700 '>{"So I heard you're looking for"}</h1>
+                            <h1 className='py-4 text-gray-700 '>{"Looking for "}</h1>
                         </animated.div>
                         <div className='py-4 justify-center text-gray-700'>
                             <animated.div style={{...springRight}}>
@@ -127,7 +127,7 @@ const Main = () => {
                 </div>
                 <div className='grid grid-cols-1 py-20 justify-center'>
                     <animated.div style={{...springFadeIn}}>
-                        <p className=' text-gray-600 max-w-[70%] m-auto'>{"No way! I'm looking for someone who's looking for that!"}</p>
+                        <p className=' text-gray-600 max-w-[70%] m-auto'>{"Check out some of my projects below!"}</p>
                     </animated.div>
                 </div>
                 <div className='flex items-center justify-evenly max-w-[330px] m-auto '>

@@ -20,9 +20,9 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Main/>
+      <Projects/>
       <About/>
       <Skills/>
-      <Projects/>
       <Contact/>
 
     </div>
