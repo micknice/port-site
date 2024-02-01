@@ -46,7 +46,7 @@ const Navbar = () => {
       'fixed w-full h-20  shadow-none z-[100] bg-white bg-opacity-100'}>
       <div className ='flex justify-between items-center w-full h-full px-2 2xl:px-16 sm:ml-3'>
         <Link href='/'>
-          <Image className ={
+          {/* <Image className ={
         shadow == 4 ? '' : 
         shadow == 0 ? 'opacity-75 ' : 
         shadow == 1 ? 'opacity-30' : 
@@ -57,16 +57,16 @@ const Navbar = () => {
           src={navLogo} 
           alt='/' 
           width='auto' 
-        height='50'/>
+        height='50'/> */}
         </Link>
         <div>
-          <ul className='hidden md:flex'>
+          <ul className='hidden md:flex font-poppins'>
             <Link href='/' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Home</li>
             </Link>
-            <Link href='/#about' >
+            {/* <Link href='/#about' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>About</li>
-            </Link>
+            </Link> */}
             <Link href='/#skills' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Skills</li>
             </Link>
@@ -74,9 +74,9 @@ const Navbar = () => {
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Projects</li>
             </Link>
 
-            <Link href='#contact' >
+            {/* <Link href='#contact' >
               <li className='ml-10 font-bold text-sm uppercase hover:border-b hover:scale-105'>Contact</li>
-            </Link>
+            </Link> */}
           </ul>
           <div onClick={handleNav} className='md:hidden'>
             <AiOutlineMenu size={25}/>

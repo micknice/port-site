@@ -12,42 +12,42 @@ import { useState, useEffect } from 'react';
 
 
 export default function App() {
-    // const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     
     // scratch.initializeGame()
     // // playJazz()
   
-    // useEffect(() => {
-    //   // Function to check if the screen width is less than a certain threshold (e.g., 768px)
-    //   const checkIsMobile = () => {
-    //     setIsMobile(window.innerWidth < 768);
-    //   };
+    useEffect(() => {
+      // Function to check if the screen width is less than a certain threshold (e.g., 768px)
+      const checkIsMobile = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
   
-    //   // Add a listener to the window resize event to update the isMobile state
-    //   window.addEventListener('resize', checkIsMobile);
+      // Add a listener to the window resize event to update the isMobile state
+      window.addEventListener('resize', checkIsMobile);
   
-    //   // Initial check when the component mounts
-    //   checkIsMobile();
+      // Initial check when the component mounts
+      checkIsMobile();
   
-    //   // Clean up the listener when the component unmounts
-    //   return () => {
-    //     window.removeEventListener('resize', checkIsMobile);
-    //   };
-    // }, []);
+      // Clean up the listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', checkIsMobile);
+      };
+    }, []);
   
-    // return (
-    //   <div>
-    //     {isMobile ? (
-    //         <div className='outline h-screen w-full justify-center items-center'>
-    //             <GameFrameSm/>
-    //         </div>
-    //     ) : (
-    //         <div className='outline h-screen w-full justify-center items-center'>
-    //             <GameFrame/>
-    //         </div>
-    //     )}
-    //   </div>
-    // );
+    return (
+      <div>
+        {isMobile ? (
+            <div className=' h-screen w-full justify-center items-center'>
+                <GameFrameSm/>
+            </div>
+        ) : (
+            <div className=' h-screen w-full justify-center items-center'>
+                {/* <GameFrame/> */}
+            </div>
+        )}
+      </div>
+    );
     return (
       <GameFrameSm/>
     )

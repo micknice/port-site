@@ -66,24 +66,37 @@ const workout = () => {
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={JavaScript} height='30' className='pr-1'/>JavaScript
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={NextImg} height='28' className='pr-1 px-1 '/> Next
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={ReactLogo} height='29' className='pr-1'/>React
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image alt='/' src={MobXImg} height='30' className='pr-1 px-1'/> MobX
-              </p>
-              
+            <div className='grid grid-cols-2 md:grid-cols-1'>
+            <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={JavaScript} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  JavaScript
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={ReactLogo} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  React
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={NextImg} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  NextJS
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={ReactLogo} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  React
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Mapbox} height='28' className=' col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  MobX
+                </p>
+              </div>
             </div>
           </div>
         </div>

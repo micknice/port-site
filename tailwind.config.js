@@ -11,6 +11,10 @@ module.exports = {
       backgroundImage: {
         'mountainsfg': " url(../public/assets/parallax/mountainsfg.png)",
       },
+      fontFamily: {
+        bebas: ["Bebas Neue", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      }
     },
   },
   plugins: [],

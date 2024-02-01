@@ -9,6 +9,7 @@ import cashImg from '../public/assets/projects/cashoverflowcrop.png'
 import TypeScript from '../public/assets/skills/Typescript_logo_2020.svg.png'
 import Tailwind from '../public/assets/skills/Tailwind_CSS_Logo.svg.png'
 import GameOne from '../components/GameOne'
+import Next from '../public/assets/skills/next.png';
 
 
 import dynamic from 'next/dynamic'
@@ -48,14 +49,9 @@ const workout = () => {
           <p>
             Instant win game of chance.
           </p>
+          <div className=''><GameOne/></div>
           
-          <a
-            href='https://main--singular-manatee-cfe23a.netlify.app/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4 mr-8 hover:scale-105'>Demo</button>
-          </a>
+         
           <a
             href='https://github.com/micknice/scratch-overflow'
             target='_blank'
@@ -70,26 +66,37 @@ const workout = () => {
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                <Image alt='/' src={TypeScript} height='30' className='pr-1'/>TypeScript
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                <Image alt='/' src={NextImg} height='28' className='pr-1 px-1 '/> Next
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                <Image alt='/' src={ReactLogo} height='29' className='pr-1'/>React
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                <Image alt='/' src={Tailwind} height='29' className='pr-1'/>Tailwind
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                <Image alt='/' src={MobXImg} height='30' className='pr-1 px-1'/> MobX
-              </p>
+            <div className='grid grid-cols-2 md:grid-cols-1'>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={TypeScript} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  TypeScript
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Next} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  NextJS
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={ReactLogo} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  React
+                </p>
+              </div>
+              
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Tailwind} height='28' className=' col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  TailwindCSS
+                </p>
+              </div>
               
             </div>
           </div>
         </div>
+        <div className='h-2'></div>
         <Link href='/#projects'>
           <p className='underline cursor-pointer'>Back</p>
         </Link>         

@@ -65,7 +65,7 @@ const GameFrame = observer(() => {
         setGameStarted(false)
     }
     return (
-        <div className='bg-blue-900  outline h-2/3 w-1/3  grid grid-rows-5 p-5 '>
+        <div className='bg-blue-900  outline h-2/3 w-2/3  grid grid-rows-5 p-5 scal'>
             {/* title row */}
             <div className='bg-white  h-full w-full row-span-1 flex items-center justify-center p-2'>
                 <div className='h-full w-auto mr-2'>

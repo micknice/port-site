@@ -92,37 +92,37 @@ const skinscan = () => {
           </a>
         </div>
         
-        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 md:h-auto'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1'>
+            <div className='grid grid-cols-2 md:grid-cols-1 md:pl-3'>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Javascript} height='30' className='pr-1 '/>Javascript
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Javascript} height='30' className='pr-2 '/>JavaScript
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Vue} height='27' className='pr-1 '/>Vue
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Vue} height='27' className='pr-2 '/>Vue
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Express} height='30' className='pr-1 '/>Express
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Express} height='30' className='pr-2 '/>Express
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Mysql} height='30' className='pr-1 '/>MySQL
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Mysql} height='30' className='pr-2 '/>MySQL
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Python} height='30' className='pr-1 '/>Python
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Python} height='30' className='pr-2 '/>Python
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Flask} height='30' className='pr-1 '/>Flask
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Flask} height='30' className='pr-2 '/>Flask
               </p>
               <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={Pytorch} height='30' className='pr-1 '/>PyTorch
+                {/* <RiRadioButtonFill className='pr-2' />  */}
+                <Image alt='/' src={Pytorch} height='30' className='pr-2 '/>PyTorch
               </p>
             </div>
           </div>

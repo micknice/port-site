@@ -5,10 +5,14 @@ import About from '../components/About'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import Head from 'next/head'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900', ]
+})
 
 export default function Home() {
   return (
@@ -22,7 +26,7 @@ export default function Home() {
       <Main/>
       <Projects/>
       {/* <About/> */}
-      {/* <Skills/> */}
+      <Skills/>
       {/* <Contact/> */}
 
     </div>

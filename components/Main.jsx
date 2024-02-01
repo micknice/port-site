@@ -8,7 +8,7 @@ import {useEffect, useState} from 'react'
 import TextTransition, {presets} from 'react-text-transition'
 
 
-const TEXTS = ['JS', 'TS', 'Python', 'React', 'Software']
+const TEXTS = ['Full Stack', 'JS', 'TS', 'Java', 'Python', 'React', 'Software']
 const COLOURS = ['text-[#5651e5]', 'text-[#e58751]', 'text-[#e5d651]']
 const config1 = {
             mass: 2, 
@@ -40,6 +40,7 @@ const config3 = {
 const Main = () => {
     const [index, setIndex] = useState(0);
     const [aOrAn, setAOrAn] = useState('a')
+    const [devAndy, setDevAndy] = useState('dev')
     const [devWord, setDevWord] = useState('Software');
 
     useEffect(() => {
@@ -53,8 +54,8 @@ const Main = () => {
 
     
     useEffect(() => {
-        if(devWord === 'ML') {
-            setAOrAn('an')
+        if(devWord === 'Java') {
+            setAOrAn('a(')
         } else {
             setAOrAn('a')
         }
@@ -63,6 +64,22 @@ const Main = () => {
     useEffect(() => {
         setDevWord(TEXTS[index % TEXTS.length])
     })
+
+    useEffect(() => {
+        if(devWord === 'React') {
+            setDevAndy('&&dy')
+        } else if (devWord === 'TS'){
+            setDevAndy('<Dev>')
+        } else if (devWord === 'Python'){
+            setDevAndy('dev:')
+        } else if (devWord === 'Java'){
+            setDevAndy('[] dev )')
+        } else if (devWord === 'JS'){
+            setDevAndy('dev {')
+        }   else {
+            setDevAndy('dev')
+        }
+    }, [devWord, index])
 
     
 
@@ -103,23 +120,23 @@ const Main = () => {
     })
     const COLOURS = ['text-[#5651e5]', 'text-[#e58751]']
     return (
-        <div id='home' className='w-full h-screen pt-20 text-center  z-50'>
+        <div id='home' className='w-full h-screen pt-20 text-center  z-50 font-poppins'>
             <div className='max-w-[1240px] w-full h-4/6 mx-auto pt-20 mt-16 justify-center  bg-gradient-to-t from-[#ecf0f3] to-gray-200'>
             {/* <div className='max-w-[1240px] w-full h-4/6 mx-auto pt-20 mt-16 justify-center  bg-mountainsfg bg-cover '> */}
                 <div className='max-w-[1240px] w-full h-3/6 pt-20 mx-auto flex justify-center items-center'>
                     <div>
                         {/* <p className='uppercase text-sm tracking-widest  text-gray-700 py-5'>LET'S GET BUSY</p>                */}
                         <animated.div style={{...springLeft}}>
-                            <h1 className='py-4 text-gray-700 '>{"Looking for "}</h1>
+                            <h1 className='py-4 text-gray-700 '>{"I am"}</h1>
                         </animated.div>
                         <div className='py-4 justify-center text-gray-700'>
                             <animated.div style={{...springRight}}>
                                 <h1 className='py-4 justify-center text-gray-700 flex'>{aOrAn}
-                                    <span className='text-[#e5d651]  '>{' '}
+                                    <span className='text-[#e5d651]  '>{''}
                                         <TextTransition className='ml-5 mr-5' springConfig={presets.stiff}>
                                             {devWord} 
                                         </TextTransition>
-                                    </span> dev?
+                                    </span> {devAndy}
                                 </h1>
                             </animated.div>
                         </div>

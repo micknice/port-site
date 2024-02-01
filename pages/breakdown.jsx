@@ -48,9 +48,7 @@ const workout = () => {
           <p>
             Simulation of automotive breakdowns and patrol allocation across the UK road network. Inspired by the year I spent working at the AA as a call handler.
             Written in JavaScript, pulling member data from postgreSQL database and route data from Bing Maps API. GUI made with React and Mapbox, updated via Socket.IO. 
-            I have a few long term goals for this project, firstly I am working on a refactor which will make all the API calls up front so the simulation can be run fast.
-            This will allow the generation of large amounts of data which I will use to optimize the home locations and allocation algorithm to optimize the fix/travel time ratio.
-            Im also working on spinning up multiple handlers which will feed their allocations into a centralized pipeline using Docker, K8 and Kafka.
+            
           </p>
           <ReactPlayer className=' py-8'url='https://youtu.be/DnE5YcD77SE' config={{youtube: {playerVars: {cc_load_policy: 1}}}}/> 
           <a
@@ -70,38 +68,47 @@ const workout = () => {
           
         </div>
         
-        <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
+        <div className='h-auto col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
-            <div className='grid grid-cols-3 md:grid-cols-1'>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={JavaScript} height='30' className='pr-1'/>JavaScript
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={ReactLogo} height='29' className='pr-1'/>React
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}
-                <Image alt='/' src={PostgreSQL} height='26' className='pr-1 mr-1'/> PostgreSQL
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image alt='/' src={Mapbox} height='30' className='pr-1 px-1'/> Mapbox
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image alt='/' src={Bing} height='30' className='pr-1 px-1 mr-1'/> Bing Maps
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image alt='/' src={Socket} height='26' className='pr-1 px-1 mr-0.5'/> Socket.IO
-              </p>
-              <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
-                {/* <RiRadioButtonFill className='pr-1' />  */}           
-                <Image alt='/' src={Docker} height='30' className='pr-1 px-1'/> Docker
-              </p>
+            <div className='grid grid-cols-2 md:grid-cols-1'>
+              
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={JavaScript} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  JavaScript
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={ReactLogo} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  React
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={PostgreSQL} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  PostgreSQL
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Mapbox} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  MapBox
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Bing} height='28' className=' col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  Bing
+                </p>
+              </div>
+              <div className='grid grid-cols-4 items-center justify-start'>
+                <Image alt='/' src={Socket} height='30' className='pr-2 col-span-1'/> 
+                <p className='text-gray-600 py-2 flex items-center font-semibold ml-1'>
+                  SocketIO
+                </p>
+              </div>
             </div>
           </div>
         </div>
