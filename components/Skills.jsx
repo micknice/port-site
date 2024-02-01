@@ -37,7 +37,7 @@ const Skills = () => {
         <p className='text-xl tracking-widest mt-[90px]  uppercase text-[#5651e5]'>
           Skills
         </p>
-        <h2 className='py-4'>I've worked with these...</h2>
+        <h2 className='py-4'>I have used these to build things</h2>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2 sm:text-sm md:text-xl '>
           
 
