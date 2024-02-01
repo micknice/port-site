@@ -48,15 +48,15 @@ const ecommerce = () => {
           {/* <p>Project</p> */}
           <h2 className='pb-2'>Overview</h2>
           <p>
-            Front end built with NextJS/React/TailwindCSS. Back end built using TDD with NodeJS/Express/PostgreSQL. 
+          E-commerce site inspired by mirafit.co.uk.  built on a Java / Spring Boot / PostgreSQL back end.
 
           </p>
-          <p>Allows user login, comments and voting on articles and
-              comments. </p>
+          <p>Images, product descriptions, prices and reviews scraped with Puppeteer.  </p>
           <p>
-            Features location-based weather widget and article recommendation using TF/IDF analysis.
+          Custom auth, SMTP email relay for verification and password reminder. 
 
           </p>
+          <p>Live update of inventory/cart contents via WebSockets.</p>
           {/* <ReactPlayer className=' py-8'url='https://youtu.be/QbiGu2FLbAY' />  */}
           <a
             href='https://github.com/micknice/e-commerce-fe'
