@@ -5,19 +5,23 @@ import Ainsley from '../public/assets/logos/ainsleyml.png'
 import Image, { StaticImageData } from 'next/image'
 import store from '../store/store'
 import {useSound} from 'use-sound'
+import scratch from '../scratchEngine/Scratch'
 
 
 
 interface FlipCellProps {
     flippedImg?: StaticImageData; // The image URL to display when flipped
+    finishCallback: () => void
 }
 
 
-export default function FlipCell({flippedImg}: FlipCellProps) {
+export default function FlipCell({flippedImg, finishCallback}: FlipCellProps) {
 
     const [flipped, setFlipped] = useState(false)
 
     const [playFlipSfx] = useSound('/assets/sfx/swish.mp3', {volume: 0.2})
+    const [playKerching] = useSound('/assets/sfx/kerching.mp3')
+    const [playSigh] = useSound('/assets/sfx/sigh.mp3', {volume:0.2})
     
 
     const handleFlip = () => {
@@ -25,6 +29,14 @@ export default function FlipCell({flippedImg}: FlipCellProps) {
             setFlipped(true)
             store.incrementFlipCount()
             playFlipSfx()
+            if(store.flipCount === 9){
+                if(scratch.keyLang === 'Loss') {
+                    playSigh()
+                } else {
+                    playKerching()
+                }
+                finishCallback()
+            }
         }
     }
     

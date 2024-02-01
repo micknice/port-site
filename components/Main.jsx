@@ -63,7 +63,7 @@ const Main = () => {
 
     useEffect(() => {
         setDevWord(TEXTS[index % TEXTS.length])
-    })
+    }, [devWord, index])
 
     useEffect(() => {
         if(devWord === 'React') {

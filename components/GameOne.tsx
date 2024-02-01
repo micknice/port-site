@@ -43,7 +43,7 @@ export default function App() {
             </div>
         ) : (
             <div className=' h-screen w-full justify-center items-center'>
-                {/* <GameFrame/> */}
+                <GameFrame/>
             </div>
         )}
       </div>

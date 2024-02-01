@@ -29,23 +29,14 @@ const GameFrameSm = observer(() => {
     const [playJazz, {stop}] = useSound('/assets/sfx/bigband.mp3', {volume:0.125})
     
 
-    useEffect(()=> {
-        if(store.flipCount === 9) {
-            if(scratch.keyLang === 'Loss') {
-                playSigh()
-            } else {
-                playKerching()
-            }
-            const delay = async() => {
-                const delay = (duration: number) => new Promise(resolve => setTimeout(resolve, duration));
-                await delay(700)
-                setGameFinished(true)
-            }
-            delay()
-            
-            
-        }
-    },[store.flipCount])
+    
+
+    const delayedGameFinish = async() => {
+        const delay = (duration: number) => new Promise(resolve => setTimeout(resolve, duration));
+        await delay(800)
+        setGameFinished(true)
+    }
+    
 
     const handleStartGame = async() => {
         const delay = (ms : number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -59,6 +50,7 @@ const GameFrameSm = observer(() => {
     }
     
     const handlePlayAgain = () => {
+        playClick()
         scratch.initializeGame()
         store.flipCount = 0
         setGameFinished(false)
@@ -93,37 +85,37 @@ const GameFrameSm = observer(() => {
 
                         <div className=' row-span-1 grid grid-cols-3'>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[0]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[0]} finishCallback={delayedGameFinish}/>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[1]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[1]} finishCallback={delayedGameFinish}/>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[2]}/>
-                            </div>
-                        </div>
-
-                        <div className=' row-span-1 grid grid-cols-3'>
-                            <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[3]}/>
-                            </div>
-                            <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[4]}/>
-                            </div>
-                            <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[5]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[2]} finishCallback={delayedGameFinish}/>
                             </div>
                         </div>
 
                         <div className=' row-span-1 grid grid-cols-3'>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[6]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[3]} finishCallback={delayedGameFinish}/>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[7]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[4]} finishCallback={delayedGameFinish}/>
                             </div>
                             <div className='flex justify-center items-center'>
-                                <FlipCellSm flippedImg={scratch.cardImgArr[8]}/>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[5]} finishCallback={delayedGameFinish}/>
+                            </div>
+                        </div>
+
+                        <div className=' row-span-1 grid grid-cols-3'>
+                            <div className='flex justify-center items-center'>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[6]} finishCallback={delayedGameFinish}/>
+                            </div>
+                            <div className='flex justify-center items-center'>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[7]} finishCallback={delayedGameFinish}/>
+                            </div>
+                            <div className='flex justify-center items-center'>
+                                <FlipCellSm flippedImg={scratch.cardImgArr[8]} finishCallback={delayedGameFinish}/>
                             </div>
                         </div>
                         
